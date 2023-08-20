@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import Hero from "./hero";
-import About from "./about";
-import Contact from "./contact";
+import Hero from "./Hero";
+import About from "./About";
+import Contact from "./Contact";
 
-export default function Home() {
+export default () =>  {
   return (
     <main className="">
       <Hero />
