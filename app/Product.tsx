@@ -27,7 +27,7 @@ const features = [
   },
 ]
 
-const About = () => {
+const Product = () => {
   return (
     <div id="product" className="bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,4 +60,4 @@ const About = () => {
     </div>
   )
 }
-export default About
+export default Product

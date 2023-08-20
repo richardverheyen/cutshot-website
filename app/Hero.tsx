@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Image from 'next/image'
 
-const HeroSection = () => {
+const Hero = () => {
   return (
     <div className="bg-cream">
       <Header />
@@ -81,4 +81,4 @@ const HeroLeft = () => {
   );
 }
 
-export default HeroSection
+export default Hero

@@ -1,13 +1,13 @@
-import HeroSection from "./HeroSection";
+import Hero from "./Hero";
 import Product from "./Product";
-import ContactSection from "./ContactSection";
+import Contact from "./Contact";
 
 const IndexPage = () =>  {
   return (
     <main className="">
-      <HeroSection />
+      <Hero />
       <Product />
-      <ContactSection />
+      <Contact />
     </main>
   )
 }
