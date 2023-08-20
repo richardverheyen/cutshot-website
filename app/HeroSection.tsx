@@ -1,9 +1,7 @@
-'use client'
-
 import Header from "./Header";
 import Image from 'next/image'
 
-const Hero = () => {
+const HeroSection = () => {
   return (
     <div className="bg-cream">
       <Header />
@@ -83,4 +81,4 @@ const HeroLeft = () => {
   );
 }
 
-export default Hero
+export default HeroSection

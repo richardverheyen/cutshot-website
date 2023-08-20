@@ -7,7 +7,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-const Contact = () => {
+const ContactSection = () => {
   const [agreed, setAgreed] = useState(false)
 
   return (
@@ -176,4 +176,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default ContactSection
