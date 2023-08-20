@@ -3,7 +3,7 @@
 import Header from "./Header";
 import Image from 'next/image'
 
-export default () => {
+const Hero = () => {
   return (
     <div className="bg-cream">
       <Header />
@@ -82,3 +82,5 @@ const HeroLeft = () => {
     </section>
   );
 }
+
+export default Hero

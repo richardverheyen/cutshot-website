@@ -27,7 +27,7 @@ const features = [
   },
 ]
 
-export default () => {
+const About = () => {
   return (
     <div className="bg-cream py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -60,3 +60,4 @@ export default () => {
     </div>
   )
 }
+export default About

@@ -12,7 +12,7 @@ const navigation = [
     { name: 'Contact', href: '#' },
   ]
 
-export default () => {
+const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
     return <header className="absolute inset-x-0 top-0 z-50">
@@ -102,3 +102,5 @@ export default () => {
         </Dialog>
       </header>
 }
+
+export default Header

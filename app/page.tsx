@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Contact from "./Contact";
 
-export default () =>  {
+const IndexPage = () =>  {
   return (
     <main className="">
       <Hero />
@@ -11,3 +11,5 @@ export default () =>  {
     </main>
   )
 }
+
+export default IndexPage
