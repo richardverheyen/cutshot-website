@@ -37,7 +37,7 @@ const Product = () => {
             Make reviewing your gameplay a better experience
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            If you've ever tried comparing sub-second highlight clips from hours of gameplay footage on your phone, you probably realised how annoying it is.
+            If you&apos;ve ever tried comparing sub-second highlight clips from hours of gameplay footage on your phone, you probably realised how annoying it is.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
