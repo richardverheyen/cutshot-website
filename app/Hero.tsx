@@ -63,7 +63,7 @@ const HeroLeft = () => {
           Edit Beach Volleyball footage with AI
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Cutshot automatically identifies Digs, Sets and Spikes in 1080p video, allowing you to create montages of your gameplay and get feedback to play better, faster.
+          Cutshot automatically identifies Digs, Sets and Spikes in 1080p video, allowing you to quickly create montages of your gameplay on your phone and get feedback to play better, faster.
         </p>
         <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
           <a
