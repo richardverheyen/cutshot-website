@@ -1,0 +1,54 @@
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+// Define the Prisma model for Action
+model Action {
+    id        String  @id @default(uuid()) // UUID type in CoreData corresponds to String in Prisma with UUID default value
+    thumbnail Bytes? // Binary type in CoreData corresponds to Bytes in Prisma
+    timestamp Float?  @default(0) // Float in CoreData corresponds to Float in Prisma
+    type      String? // String remains String
+    videoId   String? // Foreign key for the relationship with Video
+    video     Video?  @relation(fields: [videoId], references: [id]) // Define the relation to Video
+
+    @@map("actions") // Maps the model to the "actions" table
+}
+
+// Define the Prisma model for GameState
+model GameState {
+    id             String  @id @default(uuid())
+    endTimestamp   Float?  @default(0)
+    inPlay         Boolean @default(false) // Boolean in CoreData corresponds to Boolean in Prisma
+    startTimestamp Float?  @default(0)
+    videoId        String? // Foreign key for the relationship with Video
+    video          Video?  @relation(fields: [videoId], references: [id])
+
+    @@map("gameStates") // Maps the model to the "gameStates" table
+}
+
+// Define the Prisma model for Video
+model Video {
+    id                 String      @id @default(uuid())
+    assetIdentifier    String? // Optional String
+    creationDate       DateTime? // Date type in CoreData corresponds to DateTime in Prisma
+    duration           Float?      @default(0) // Double in CoreData corresponds to Float in Prisma, assuming precision is not critical
+    fileURL            String? // URI type in CoreData corresponds to String in Prisma
+    frameRate          Float?      @default(0)
+    labellingDone      Boolean     @default(false)
+    runFinished        DateTime? // DateTime for Date
+    runStarted         DateTime?
+    savedToPlanetscale Boolean     @default(false)
+    thumbnail          Bytes?
+    title              String?
+    trackingBallData   Bytes?
+    actions            Action[] // One-to-many relationship with Action
+    states             GameState[] // One-to-many relationship with GameState
+
+    @@map("videos") // Maps the model to the "videos" table
+}

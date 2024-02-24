@@ -1,6 +1,10 @@
-export const dynamic = 'force-dynamic'; // static by default, unless reading the request
-export const runtime = 'nodejs';
+import { PrismaClient } from "@prisma/client";
 
-export function GET(request: Request) {
-  return new Response(`Hello from ${process.env.VERCEL_REGION}`);
+const prisma = new PrismaClient();
+
+export const dynamic = "force-dynamic"; // static by default, unless reading the request
+export const runtime = "nodejs";
+export async function GET() {
+  const videos = await prisma.video.findMany();
+  return new Response(`Hello from ${[...videos.map((video) => video.id)]}`);
 }

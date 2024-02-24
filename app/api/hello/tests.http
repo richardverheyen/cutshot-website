@@ -1,0 +1,7 @@
+post http://localhost:3000/api/post
+Content-Type: application/json
+
+{
+    "name": "rich",
+    "email": "rich@vhyn.au"
+}
